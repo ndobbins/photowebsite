@@ -87,7 +87,26 @@
     form{display:grid;gap:12px;max-width:680px}
     .field{display:grid;gap:6px}
     label{color:var(--muted);font-size:.95rem}
-    input,textarea{background:#0b0e13;border:1px solid var(--border);border-radius:12px;padding:12px 14px;color:var(--text)}
+    input,textarea{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px 14px;
+  color:var(--text);
+  font-size:1rem;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:var(--muted);
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:var(--brand);
+  box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
     textarea{min-height:140px;resize:vertical}
     .helper{font-size:.85rem;color:var(--muted)}
 
@@ -430,6 +449,7 @@
   </script>
 </body>
 </html>
+
 
 
 
