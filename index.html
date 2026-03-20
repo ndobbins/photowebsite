@@ -52,6 +52,32 @@
     .nav-cta{display:flex;gap:.6rem;align-items:center}
     .menu-btn{display:none}
 
+    .hamburger {
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  position: relative;
+  display: block;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  left: 0;
+}
+
+.hamburger::before {
+  top: -6px;
+}
+
+.hamburger::after {
+  top: 6px;
+}
+
     /* Hero */
     .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
     .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:clamp(20px,4vw,48px)}
@@ -138,15 +164,15 @@ textarea:focus{
   }
 
   .menu-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .6rem .8rem;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--muted);
-    background: transparent;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* 🔥 important */
+  width: 40px;             /* 🔥 give it size */
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+}
 
   .drawer {
     position: fixed;
